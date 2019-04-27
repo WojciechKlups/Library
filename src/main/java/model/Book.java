@@ -1,9 +1,7 @@
 package model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Book {
@@ -13,6 +11,12 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int book_id;
     private String name;
+
+    @ManyToOne
+    private Category category;
+
+    @ManyToMany
+    private Set<Author> authors;
 
     public int getBook_id() {
         return book_id;

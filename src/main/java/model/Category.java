@@ -8,4 +8,5 @@ public class Category {
 
     @Id
     private int id;
+    private String name;
 }

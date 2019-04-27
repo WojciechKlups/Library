@@ -1,10 +1,8 @@
 package model;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Author {
@@ -14,6 +12,9 @@ public class Author {
     private int id;
     private String name;
     private String lastname;
+
+    @ManyToMany(mappedBy = "authors")
+    private Set<Book> books;
 
     public int getId() {
         return id;
