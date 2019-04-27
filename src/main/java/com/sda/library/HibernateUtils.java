@@ -1,4 +1,4 @@
-package library;
+package com.sda.library;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

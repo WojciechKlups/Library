@@ -1,4 +1,4 @@
-package model;
+package com.sda.library.model;
 
 import javax.persistence.*;
 import java.util.Set;
